@@ -5,12 +5,10 @@ import datetime
 
 
 def main():
-    _FILENAME = "Pass_{date}.txt'.format(date=datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    with open('./out/{file}'.format(file=_FILENAME), 'w+') as f:
+    with open('Pass_{date}.txt'.format(date=datetime.datetime.now().strftime("%Y%m%d_%H%M%S"), 'w+') as f:
         for entry in filter(None, [reqRobots(host) for host in [line.strip() for line in open("./hosts", 'r')]]):
             f.write(entry)
-            
-    print(_FILENAME)
+
     exit(0)
 
 
