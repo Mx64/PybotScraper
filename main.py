@@ -9,7 +9,7 @@ def main():
         for entry in filter(None, [reqRobots(host) for host in [line.strip() for line in open("./hosts", 'r')]]):
             f.write(entry)
 
-    exit(1)
+    exit(0)
 
 
 def reqRobots(_URL):
